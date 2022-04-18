@@ -1,0 +1,197 @@
+body {
+    font-family: 'DM Mono', monospace;
+    background-color: #FFEBB0;
+    color: #316137;
+    margin:0;
+    padding:0;
+}
+  
+  
+  
+/* /////////CONTAINERS///////// */
+#mainContainer {
+    display: flex;
+    height: 91vh;
+    margin: 40px;
+}
+
+#landscapeContainer {
+    flex-wrap: wrap;
+    height: 500px;
+    width: 1400px;
+    position:relative; 
+    overflow:hidden;
+    display: flex;
+    align-items: flex-end;
+    border: solid;
+    margin-right: 20px;
+}
+
+#interactionContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* /////////STORY BOX///////// */
+#storyContainer {
+    height: 413px;
+    width: 460px;
+    border: solid;
+    padding: 20px;
+}
+
+.title {
+    border: solid;
+    margin-bottom: 20px;
+    padding: 0 10px 0 10px;
+    text-align: center;
+}
+
+.storyText {
+    font-style: italic;
+}
+
+
+
+/* //////////LANDSCAPE////////// */
+.landscape {
+    position:absolute;
+    font-size: 15px;
+}
+
+.animateLandscape {
+    overflow:hidden;
+    white-space: nowrap;
+    animation: landscapeMove 60s linear infinite;
+    animation-play-state: paused;
+}
+
+@keyframes landscapeMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-73.96%, 0);
+    }
+}
+
+
+
+/* /////////////YOU///////////// */
+#you {
+    text-align: center;
+    top: 68%;
+    left: 50%;
+    position: absolute;
+    animation: bounce 3s ease infinite;
+    font-size: 15px;
+    /*   animation-play-state: paused; */
+}
+
+
+
+/* ////////////PEOPLE//////////// */
+.person {
+    z-index: 3;
+    left:-225px;
+    position: absolute;
+    height: 50px;
+    font-size: 15px;
+}
+
+.person:hover {
+    font-weight: bold;
+}
+
+.animatePerson1 {
+    white-space: nowrap;
+    animation: bounce 3s ease infinite;
+    animation-play-state: paused;
+}
+
+.animatePerson2 {
+    overflow:hidden;
+    white-space: nowrap;
+    animation: peopleMove 60s linear 1;
+    animation-play-state: paused;
+}
+
+.animatePerson3 {
+    overflow:hidden;
+    white-space: nowrap;
+    animation: peopleMove2 60s linear 1;
+    animation-play-state: paused;
+}
+
+@keyframes peopleMove {
+    from {
+            left:-225px;
+        }
+        to {
+            left:115vw;
+        }
+}
+
+@keyframes peopleMove2 {
+    from {
+            left:115vw;
+        }
+        to {
+            left:-225px;
+        }
+}
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+}
+
+
+
+/* ///////////BUTTONS/////////// */ 
+
+#buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#walkButtonContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.button {
+    font-size: 18px;
+    border: solid;
+    height: 23px;
+    padding: 0 10px 0 10px;
+}
+
+.joinLeaveButton {
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.off {
+    background-color: #316137;
+    color: #FFEBB0;
+}
+
+#submitButton {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    margin-left: 50px;
+}
+
+.hover:hover {
+    background-color: #316137;
+    color: #FFEBB0;
+    cursor: pointer;
+}
