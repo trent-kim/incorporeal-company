@@ -154,10 +154,11 @@ body {
 
 #buttonContainer {
     display: flex;
+
     flex-wrap: wrap;
     font-size: 18px;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 #walkButtonContainer {
@@ -184,10 +185,10 @@ body {
 }
 
 #submitButton {
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
-    margin-left: 50px;
+    position: relative;
+    left: 415px;
+    /* top: 100px; */
+    margin-top: 40px;
 }
 
 .hover:hover {

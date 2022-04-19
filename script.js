@@ -13,8 +13,6 @@ $.getJSON("data.json", function (data) {
 });
 
 $("#walkButton").click(function () {
-    let t = 0;
-  
     // $(".running").css("animation-play-state", "running");
     $(".landscape").css("animation-play-state", "running");
     // $(".person").css("animation-play-state", "running");
@@ -136,7 +134,6 @@ function clickPerson() {
 
     let clickedId = $(".walkWith").attr("id");
     let idNum = clickedId.slice(6);
-    console.log(idNum);
     let recording = recordings[idNum];
     recording.play();
 
